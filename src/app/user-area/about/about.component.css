@@ -1,0 +1,63 @@
+.aboutPage {
+    width: 70%;
+    height: 385px;
+    background-color: #cfe107;
+    color: white;
+    border-radius: 30px;
+    margin: auto;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    text-transform: capitalize;
+    box-shadow: 2px 2px 24px 13px rgba(222, 250, 129, 0.75);
+    -webkit-box-shadow: 2px 2px 24px 13px rgba(222, 250, 129, 0.75);
+    -moz-box-shadow: 2px 2px 24px 13px rgba(222, 250, 129, 0.75);
+}
+
+h2 {
+    color: #56534d;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+p {
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.slide-in-top {
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-top {
+    0% {
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-top {
+    0% {
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

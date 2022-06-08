@@ -1,0 +1,15 @@
+{
+  "targets": {
+    "test-419b7": {
+      "hosting": {
+        "frontend": [
+<<<<<<< HEAD
+          "wseg-lost---foodwaste"
+=======
+          "test-419b7
+>>>>>>> origin/main
+        ]
+      }
+    }
+  }
+}

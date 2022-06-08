@@ -1,0 +1,114 @@
+<div class="container">
+  <div class="innerwrap">
+    <section class="section1 clearfix">
+      <div class="textcenter">
+        <span class="shtext">Contact Us</span>
+        <span class="seperator"></span>
+        <h1>
+          Haben Sie eine Anfrage? Wir helfen Ihnen gerne weiter - Hinterlassen
+          Sie uns eine Nachricht und wir melden uns umgehend bei Ihnen.
+        </h1>
+      </div>
+    </section>
+
+    <section class="section2 clearfix">
+      <div class="col2 column1 first">
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+        <div
+          class="sec2map"
+          style="overflow: hidden; height: 550px; width: 100%"
+        >
+          <div id="gmap_canvas" style="height: 100%; width: 100%">
+            <iframe
+              src="https://maps.google.com/maps?q=3000%20Bern%20Schweiz&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
+              style="width: 100%; height: 100%"
+            ></iframe>
+          </div>
+          <div>
+            <small
+              ><a href="http://embedgooglemaps.com">
+                embed google maps
+              </a></small
+            >
+          </div>
+          <div>
+            <small
+              ><a href="http://freedirectorysubmissionsites.com/"
+                >free web directories</a
+              ></small
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col2 column2 last">
+        <div class="sec2innercont">
+          <div class="sec2addr">
+            <p>Foodwaste Ade Community Musterstrasse 11 3000 Bern Schweiz</p>
+            <!-- <p class="para123">
+              <span class="collig">Phone :</span> +41 79 107 81 84
+            </p> -->
+            <p class="para123">
+              <span class="collig">Email :</span>
+              louise-dorothee.schindler@students.bfh.ch
+            </p>
+            <p class="para123">
+              <span class="collig">Fax :</span> +41 79 107 81 84
+            </p>
+          </div>
+        </div>
+        <div class="sec2contactform">
+          <h3 class="sec2frmtitle">Want to Know More?? Drop Us a Mail</h3>
+          <form [formGroup]="postContactForm">
+            <div class="clearfix">
+              <input
+                class="col2 first"
+                type="text"
+                placeholder="FirstName"
+                formControlName="firstName"
+              />
+              <input
+                class="col2 last"
+                type="text"
+                placeholder="LastName"
+                formControlName="lastName"
+              />
+            </div>
+            <div class="clearfix">
+              <input
+                class="col2 first"
+                type="Email"
+                placeholder="Email"
+                formControlName="email"
+              />
+              <input
+                class="col2 last"
+                type="text"
+                placeholder="Contact Number"
+                formControlName="contactNumber"
+              />
+            </div>
+            <div class="clearfix">
+              <textarea
+                name="textarea"
+                id=""
+                cols="30"
+                rows="7"
+                formControlName="message"
+              >
+Your message here...</textarea
+              >
+            </div>
+            <div class="clearfix">
+              <input type="submit" value="Send" (click)="submitForm()" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

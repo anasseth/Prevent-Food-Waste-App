@@ -1,0 +1,66 @@
+.slide {
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    border: 15px solid #56534d;
+    border-top-color: #CFE107;
+    border-left-color: #CFE107;
+    margin-top: 79px;
+    overflow: hidden;
+    position: relative;
+}
+
+.MainCompanyLogo {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    border-radius: 50%;
+    box-shadow: 0px -1px 35px 25px rgb(201 245 54 / 75%);
+    -webkit-box-shadow: 0px -1px 35px 25px rgb(201 245 54 / 75%);
+    -moz-box-shadow: 0px -1px 35px 25px rgba(201, 245, 54, 0.75);
+}
+
+.slide>div {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    animation: slide 25s infinite;
+    opacity: 0;
+    background-position: center;
+}
+
+.slide>div:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.slide>div:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.slide>div:nth-child(4) {
+    animation-delay: 15s;
+}
+
+.slide>div:nth-child(5) {
+    animation-delay: 20s;
+}
+
+@keyframes slide {
+    10% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    40% {
+        transform: scale(1.1);
+    }
+}

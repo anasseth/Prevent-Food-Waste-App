@@ -1,0 +1,60 @@
+<div class="navigation">
+  <ul>
+    <li class="list" routerLinkActive="active">
+      <a routerLink="/user/home">
+        <span class="icon">
+          <mat-icon class="icon-symbol">home</mat-icon>
+        </span>
+        <span class="title">Home</span>
+      </a>
+    </li>
+    <li class="list" routerLinkActive="active">
+      <a routerLink="/user/feed">
+        <span class="icon">
+          <mat-icon class="icon-symbol">view_column</mat-icon>
+        </span>
+        <span class="title">Feed</span>
+      </a>
+    </li>
+    <li class="list" routerLinkActive="active">
+      <a routerLink="/user/post">
+        <span class="icon">
+          <mat-icon class="icon-symbol">aspect_ratio</mat-icon>
+        </span>
+        <span class="title"> Neuer Beitrag</span>
+      </a>
+    </li>
+    <li class="list" routerLinkActive="active">
+      <a routerLink="/user/history">
+        <span class="icon">
+          <mat-icon class="icon-symbol">history</mat-icon>
+        </span>
+        <span class="title"> Beitragsgeschichte</span>
+      </a>
+    </li>
+    <li class="list" routerLinkActive="active">
+      <a routerLink="/user/about">
+        <span class="icon">
+          <mat-icon class="icon-symbol"> chat</mat-icon>
+        </span>
+        <span class="title">Über uns</span>
+      </a>
+    </li>
+    <li class="list" routerLinkActive="active">
+      <a routerLink="/user/contact-us">
+        <span class="icon">
+          <mat-icon class="icon-symbol"> phone</mat-icon>
+        </span>
+        <span class="title">Kontakt</span>
+      </a>
+    </li>
+    <li class="list" routerLinkActive="active" (click)="logout()">
+      <a>
+        <span class="icon">
+          <mat-icon class="icon-symbol">exit_to_app</mat-icon>
+        </span>
+        <span class="title">Ausloggen</span>
+      </a>
+    </li>
+  </ul>
+</div>

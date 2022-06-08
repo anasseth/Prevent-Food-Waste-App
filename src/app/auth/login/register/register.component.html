@@ -1,0 +1,47 @@
+<div class="background">
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <h2>Registrierung</h2>
+      <div class="fadeIn first"></div>
+      <form [formGroup]="registerForm">
+        <input
+          type="text"
+          id="login"
+          class="fadeIn second"
+          name="login"
+          placeholder="Email"
+          formControlName="email"
+        />
+
+        <input
+          type="text"
+          id="password"
+          class="fadeIn third"
+          name="login"
+          placeholder="Passwort"
+          formControlName="password"
+        />
+
+        <input
+          type="text"
+          id="password"
+          class="fadeIn third"
+          name="login"
+          placeholder="Passwort Bestätigen"
+          formControlName="confirmPassword"
+        />
+        <button
+          type="submit"
+          (click)="registerUser()"
+          class="fadeIn fourth button1"
+          value="Log In"
+        >
+          Registrieren
+        </button>
+      </form>
+      <div id="formFooter">
+        <a class="underlineHover"></a>
+      </div>
+    </div>
+  </div>
+</div>

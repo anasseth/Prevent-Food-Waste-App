@@ -1,0 +1,138 @@
+<div class="row" style="padding-bottom: 100px">
+  <div class="col-md-6 col-md-offset-3">
+    <form id="msform">
+      <!-- progressbar -->
+      <ul id="progressbar">
+        <li [ngClass]="showFoodDetail == true ? 'active' : ''">
+          Produkt Details
+        </li>
+        <li [ngClass]="showUploadPicture == true ? 'active' : ''">
+          Bild hochladen
+        </li>
+        <li [ngClass]="showConfirm == true ? 'active' : ''">Bestätigung</li>
+      </ul>
+      <!-- fieldsets -->
+      <fieldset *ngIf="showFoodDetail" class="slide-in-bottom">
+        <h2 class="fs-title">Produkt Details</h2>
+        <h3 class="fs-subtitle">
+          Bitte wählen Sie die Produktekategorie aus und geben Sie relevante
+          Informationen zum Produkt ein.
+        </h3>
+        <form [formGroup]="postDetailForm">
+          <input
+            type="text"
+            name="fname"
+            placeholder="Produktname"
+            formControlName="name"
+          />
+          <select
+            name=""
+            id=""
+            placeholder="Wählen Sie die Produktkategorie aus"
+            formControlName="category"
+          >
+            <option value="null">Wählen Sie die Produktkategorie aus</option>
+            <option value="Bohnen und Hülsenfrüchte">
+              Bohnen und Hülsenfrüchte
+            </option>
+            <option value="Fleisch & Hähnchen">Fleisch & Hähnchen</option>
+            <option value="Reis">Reis</option>
+            <option value="Brot">Brot</option>
+            <option value="Früchte & Gemüse">Früchte & Gemüse</option>
+            <option value="Süssigkeiten & Süssgebäck">
+              Süssigkeiten & Süssgebäck
+            </option>
+            <option value="Säfte & Getränke">Säfte & Getränke</option>
+          </select>
+          <input
+            type="text"
+            name=""
+            formControlName="additionalDetail"
+            placeholder="Zusätzliche Informationen (optional)"
+          />
+          <input
+            type="number"
+            name="lname"
+            placeholder="Preis"
+            formControlName="price"
+          />
+          <input
+            type="text"
+            name="phone"
+            placeholder="Kontakt (Beispiel +41 XX XXX XX XX)"
+            formControlName="phone"
+          />
+          <input
+            type="text"
+            placeholder="Adresse (optional)"
+            formControlName="location"
+          />
+        </form>
+        <input
+          type="button"
+          name="next"
+          class="next action-button"
+          value="Weiter"
+          (click)="moveToUploadPicture()"
+        />
+      </fieldset>
+      <fieldset *ngIf="showUploadPicture" class="slide-in-bottom">
+        <h2 class="fs-title">Bild hochladen</h2>
+        <h3 class="fs-subtitle">Lade ein Bild des Produktes hoch</h3>
+        <form [formGroup]="formTemplate">
+          <!-- <input
+            type="file"
+            name="twitter"
+            placeholder="Twitter"
+            formControlName="imageUrl"
+            (change)="showPreview($event)"
+          /> -->
+          <label for="file-upload" class="custom-file-upload">
+            {{
+              this.isImageSelected == true ? "Ausgewählt" : "Wähle ein Bild aus"
+            }}
+          </label>
+          <input
+            style="display: none"
+            id="file-upload"
+            type="file"
+            formControlName="imageUrl"
+            (change)="showPreview($event)"
+          />
+        </form>
+        <input
+          type="button"
+          name="previous"
+          class="previous action-button-previous"
+          value="Zurück"
+          (click)="moveToUploadPicture()"
+        />
+        <input
+          type="button"
+          name="next"
+          class="next action-button"
+          value="Weiter"
+          (click)="moveToConfirm()"
+        />
+      </fieldset>
+      <fieldset *ngIf="showConfirm" class="slide-in-bottom">
+        <h2 class="fs-title">Beitrag erstellen</h2>
+        <!-- <h3 class="fs-subtitle" style="color: red">
+          Please Confirm, Once item Posted Cannot Be Deleted
+        </h3> -->
+        <button class="finalPostButton" (click)="onSubmit()">
+          <span class="material-icons" style="font-size: 50px; color: white"
+            >check</span
+          >
+        </button>
+        <input
+          type="button"
+          name="previous"
+          class="previous action-button-previous"
+          value="Zurück"
+          (click)="moveToUploadPicture()"
+        />
+      </fieldset>
+    </form>
+  </div>
+</div>

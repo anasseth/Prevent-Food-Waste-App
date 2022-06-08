@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+html,
+body {
+  height: 100%;
+  background-color: #faf9fb;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.default-card {
+  min-width: 120px;
+  margin: 20px auto;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

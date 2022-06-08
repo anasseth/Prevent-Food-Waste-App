@@ -1,0 +1,51 @@
+<div class="background" style="height: 100vh">
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <h2 [ngClass]="isLogin ? 'active' : 'inactive underlineHover'">
+        Anmeldung
+      </h2>
+      <h2
+        [ngClass]="isSignUp ? 'active' : 'inactive underlineHover'"
+        (click)="startRegistration()"
+      >
+        Registrierung
+      </h2>
+      <div class="fadeIn first"></div>
+
+      <form [formGroup]="loginForm">
+        <input
+          *ngIf="isLogin || isSignUp"
+          type="text"
+          id="login"
+          class="fadeIn second"
+          name="login"
+          placeholder="Email"
+          formControlName="email"
+        />
+
+        <input
+          *ngIf="isLogin || isSignUp"
+          type="text"
+          id="password"
+          class="fadeIn third"
+          name="login"
+          placeholder="Passwort"
+          formControlName="password"
+        />
+        <button
+          type="submit"
+          class="fadeIn fourth button1"
+          value="Log In"
+          (click)="onSubmit()"
+        >
+          Anmeldung
+        </button>
+      </form>
+
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover">Passwort Vergessen?</a>
+      </div>
+    </div>
+  </div>
+</div>
